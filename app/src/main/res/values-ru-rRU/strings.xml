@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="separator_text">войти через</string>
+    <string name="create_account_button">Создать аккаунт</string>
+    <string name="google_login_button">Войти с помощью Google</string>
+    <string name="facebook_login_button">Войти с помощью Facebook</string>
+    <string name="login_link">Уже есть аккаунт ? Войти</string>
+    <string name="bottom_sheet_layout_title">Ну шо ты, чепуха...</string>
+    <string name="bottom_sheet_layout_description">У львенка разрослась жопка до космических масштабов? Давай-ка зарегистрируем тебя, котик, и может тогда твоя львица перестанет ебать твой мозг...</string>
+    <string name="password_hint">Пароль</string>
+    <string name="confirm_password_hint">Подтвердите пароль</string>
+    <string name="continue_button">Ой, ну давай уже!!!</string>
+    <string name="continue_with_google_button">Войти через Google</string>
+    <string name="continue_with_facebook_button">Войти через Facebook</string>
+</resources>
