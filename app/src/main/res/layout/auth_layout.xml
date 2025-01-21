@@ -7,9 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/auth_layout_background"
     android:orientation="vertical"
-    tools:context=".MainActivity">
-
-    <!-- Logo -->
+    tools:context=".view.MainActivity">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -25,8 +23,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.36" />
 
-    <!-- Buttons layout -->
-
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
@@ -39,8 +35,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.883">
-
-        <!-- Create account button -->
 
         <Button
             android:id="@+id/create_account_button"
@@ -55,8 +49,6 @@
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="18sp" />
-
-        <!-- Separator -->
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -90,8 +82,6 @@
                 android:background="#838383" />
         </LinearLayout>
 
-        <!-- Login via Google -->
-
         <Button
             android:id="@+id/button"
             android:layout_width="320dp"
@@ -107,8 +97,6 @@
             android:textColor="@color/white"
             android:textSize="18sp" />
 
-        <!-- Login via Facebook -->
-
         <Button
             android:id="@+id/button2"
             android:layout_width="320dp"
@@ -122,8 +110,6 @@
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="18sp" />
-
-        <!-- Login link -->
 
         <TextView
             android:id="@+id/textView"

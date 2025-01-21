@@ -33,6 +33,7 @@
         android:textSize="18sp" />
 
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/emailField"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="30dp"
@@ -48,6 +49,7 @@
         android:textSize="18sp" />
 
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/passwordField"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="30dp"
@@ -64,6 +66,7 @@
         android:inputType="textPassword"/>
 
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/confPasswordField"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="30dp"
@@ -80,6 +83,7 @@
         android:inputType="textPassword"/>
 
     <Button
+        android:id="@+id/continueButton"
         android:layout_width="320dp"
         android:layout_height="55dp"
         android:layout_gravity="center_horizontal"
