@@ -62,9 +62,12 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    // Retrofit core
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    // Gson converter
+
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    implementation("com.google.android.material:material:1.9.0")
+
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
 }
 

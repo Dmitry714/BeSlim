@@ -1,21 +1,37 @@
 package com.ctrlz.beslim.view
 
+import android.animation.AnimatorInflater
+import android.animation.ObjectAnimator
+import android.animation.ValueAnimator
 import android.graphics.Color
+import android.graphics.drawable.Drawable
+import android.graphics.drawable.GradientDrawable
+import android.graphics.drawable.LayerDrawable
+
 import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.view.WindowInsetsController
+
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.activity.viewModels
+
+import androidx.lifecycle.Observer
+import com.ctrlz.beslim.viewModel.MainViewModel
+
 import com.ctrlz.beslim.R
 
 class MainActivity : AppCompatActivity() {
+    private val viewModel: MainViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.auth_layout)
+        setContentView(R.layout.main_layout)
 
         //LIGHT STATUS BAR ICONS (>=Android 11)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
@@ -34,20 +50,38 @@ class MainActivity : AppCompatActivity() {
 
         val createAccountButton: Button = findViewById(R.id.create_account_button)
         createAccountButton.setOnClickListener {
-            val bottomSheetFragment = BottomSheetFragment()
-            bottomSheetFragment.show(supportFragmentManager, bottomSheetFragment.tag)
-        }
-    }
-
-    private fun showDialog(title: String, message: String) {
-        val builder = AlertDialog.Builder(this)
-        builder.setTitle(title)
-        builder.setMessage(message)
-
-        builder.setPositiveButton("Похуй") { dialog, _ ->
-            dialog.dismiss()
+            val signUpFragment = SignUpFragment()
+            signUpFragment.show(supportFragmentManager, signUpFragment.tag)
         }
 
-        builder.create().show()
+        val logLink = findViewById<TextView>(R.id.loginLink)
+        logLink.setOnClickListener {
+            viewModel.openBottomSheet()
+        }
+
+        viewModel.showBottomSheet.observe(this, Observer { shouldShow ->
+            if (shouldShow) {
+                val signInFragment = SignInFragment()
+                signInFragment.show(supportFragmentManager, signInFragment.tag)
+                viewModel.closeBottomSheet()
+            }
+        })
+
+
+        val layout = findViewById<View>(R.id.main)
+        val layerDrawable = layout.background as LayerDrawable
+        val gradient = layerDrawable.getDrawable(0).mutate() as GradientDrawable
+
+        val animator = ValueAnimator.ofFloat(0.40f, 0.6f).apply {
+            duration = 5000
+            repeatMode = ValueAnimator.REVERSE
+            repeatCount = ValueAnimator.INFINITE
+            addUpdateListener { animation ->
+                val newRadius = animation.animatedValue as Float
+                gradient.gradientRadius = layout.width * newRadius
+                layout.invalidate()
+            }
+            start()
+        }
     }
 }
