@@ -37,7 +37,7 @@
         app:layout_constraintVertical_bias="0.883">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/create_account_button"
+            android:id="@+id/singUpButton"
             android:layout_width="320dp"
             android:layout_height="55dp"
             android:layout_gravity="center_horizontal"
@@ -49,6 +49,12 @@
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="18sp" />
+
+        <com.ctrlz.beslim.controls.TestButton
+            android:layout_width="320dp"
+            android:layout_height="55dp"
+            android:id="@+id/testButton"
+            app:text="@string/btn_continue" />
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -103,16 +109,17 @@
             android:layout_height="55dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/btn_rounded"
+            android:backgroundTint="#1877F2"
             android:drawableStart="@drawable/ic_facebook_logo"
             android:fontFamily="@font/montserrat_medium"
             android:padding="10dp"
             android:text="@string/btn_continue_facebook"
             android:textAllCaps="false"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/loginLink"
+            android:id="@+id/signInTextView"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"

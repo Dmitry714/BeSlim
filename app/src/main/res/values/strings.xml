@@ -6,6 +6,7 @@
     <string name="btn_continue_google">Continue with Google</string>
     <string name="btn_continue_facebook">Continue with Facebook</string>
     <string name="btn_restore_access">Restore access</string>
+    <string name="OK">OK</string>
 
     <!--App-->
     <string name="app_name" translatable="false">BeSlim</string>

@@ -2,14 +2,6 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@drawable/ic_closed_eye"  android:state_checked="true"/>
     <item android:drawable="@drawable/ic_opened_eye"  />
-
-<!--    <item android:state_checked="true">
-        <inset android:drawable="@drawable/closed_eye" android:insetRight="8dp"/>
-    </item>
-    <item>
-        <inset android:drawable="@drawable/opened_eye" android:insetRight="8dp"/>
-    </item>-->
-
 </selector>
 
 

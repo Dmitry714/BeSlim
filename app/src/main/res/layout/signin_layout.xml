@@ -16,6 +16,7 @@
 
 
     <!-- sign up textview -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -81,11 +82,12 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Continue button -->
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/continueButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/btn_rounded"
         android:backgroundTint="@color/black"
         android:drawableRight="@drawable/ic_arrow"
@@ -96,7 +98,24 @@
         android:text="@string/btn_continue"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:visibility="visible"
+        />
+
+    <ProgressBar
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:visibility="gone"
+        android:indeterminateTint="@color/white"
+        android:background="@drawable/btn_rounded"
+        android:backgroundTint="@color/black"
+        android:minHeight="55dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_gravity="center"
+        android:id="@+id/progressBar"
+        />
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"

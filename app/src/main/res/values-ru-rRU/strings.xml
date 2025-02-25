@@ -14,5 +14,6 @@
     <string name="sil_title">Войти</string>
     <string name="sil_description">С возвращением! Введите адрес электронной почты и пароль</string>
     <string name="btn_restore_access">Восстановить доступ</string>
+    <string name="OK">ОК</string>
 
 </resources>

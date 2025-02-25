@@ -1,4 +1,4 @@
-package com.ctrlz.beslim.model
+package com.ctrlz.beslim.utils
 
 import android.content.Context
 import androidx.appcompat.app.AlertDialog
