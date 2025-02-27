@@ -12,4 +12,6 @@
     <color name="orange">#AE512C</color>
     <color name="red">#D03139</color>
     <color name="main_app_color">#021632</color>
+    <color name="gray_dark">#2E2E2E</color>
+    <color name="blue">#1877F2</color>
 </resources>

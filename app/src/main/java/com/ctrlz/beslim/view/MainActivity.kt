@@ -15,8 +15,7 @@ import android.os.Handler
 import com.ctrlz.beslim.utils.AndroidUI
 
 import com.ctrlz.beslim.R
-import com.ctrlz.beslim.controls.LoadingButton
-import com.ctrlz.beslim.controls.TestButton
+import com.ctrlz.beslim.controls.CustomButton
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -33,9 +32,9 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.main_layout)
 
+        val signInLink: CustomButton = findViewById(R.id.signInButton)
+        val signUpButton: CustomButton = findViewById(R.id.singUpButton)
 
-        val singInLink = findViewById<TextView>(R.id.signInTextView)
-        val signUpButton: Button = findViewById(R.id.singUpButton)
         val layout = findViewById<View>(R.id.main)
         val layerDrawable = layout.background as LayerDrawable
         val androidUI = AndroidUI()
@@ -43,52 +42,21 @@ class MainActivity : AppCompatActivity() {
         androidUI.setLightStatusBarIcons(this)
         androidUI.setTransparentNavigation(this)
 
-        setupClickListeners(
-            signUpButton,
-            singInLink
-        )
+        signUpButton.setOnClickListener {
 
-        backgroundAnimation(
-            layout,
-            layerDrawable
-        )
-
-
-//        val button = findViewById<LoadingButton>(R.id.loadingButton)
-//
-//        button.setOnClickListener {
-//            button.startLoading()
-//            handler.postDelayed({
-//                button.stopLoading()
-//            }, 3000)
-//        }
-
-
-        val button2 = findViewById<TestButton>(R.id.testButton)
-
-        button2.setOnClickListener {
-            button2.startLoading()
+            signUpButton.startLoading()
 
             CoroutineScope(Dispatchers.IO).launch {
                 delay(2000)
                 withContext(Dispatchers.Main) {
-                    button2.stopLoading()
+
+                    if (supportFragmentManager.findFragmentByTag("signUpFragment") == null) {
+                        val signUpFragment = SignUpFragment()
+                        signUpFragment.show(supportFragmentManager, "signUpFragment")
+                    }
+
+                    signUpButton.stopLoading()
                 }
-            }
-        }
-    }
-
-
-
-
-    private fun setupClickListeners(
-        signUpButton: Button,
-        signInLink: TextView
-    ) {
-        signUpButton.setOnClickListener {
-            if (supportFragmentManager.findFragmentByTag("signUpFragment") == null) {
-                val signUpFragment = SignUpFragment()
-                signUpFragment.show(supportFragmentManager, "signUpFragment")
             }
         }
 
@@ -98,6 +66,11 @@ class MainActivity : AppCompatActivity() {
                 signInFragment.show(supportFragmentManager, "signInFragment")
             }
         }
+
+        backgroundAnimation(
+            layout,
+            layerDrawable
+        )
     }
 
     private fun backgroundAnimation(

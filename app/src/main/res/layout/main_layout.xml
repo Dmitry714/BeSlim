@@ -36,25 +36,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.883">
 
-        <androidx.appcompat.widget.AppCompatButton
+
+        <com.ctrlz.beslim.controls.CustomButton
             android:id="@+id/singUpButton"
             android:layout_width="320dp"
             android:layout_height="55dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="10dp"
-            android:background="@drawable/btn_rounded"
-            android:backgroundTint="@color/white"
-            android:fontFamily="@font/montserrat_medium"
-            android:text="@string/btn_create_account"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
-
-        <com.ctrlz.beslim.controls.TestButton
-            android:layout_width="320dp"
-            android:layout_height="55dp"
-            android:id="@+id/testButton"
-            app:text="@string/btn_continue" />
+            app:background="@color/white"
+            app:progressColor="@color/black"
+            app:text="@string/btn_create_account"
+            app:textColor="@color/black"
+            app:textSize="18sp"/>
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -88,46 +81,61 @@
                 android:background="#D2D7DA" />
         </LinearLayout>
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button"
+        <com.ctrlz.beslim.controls.CustomButton
             android:layout_width="320dp"
             android:layout_height="55dp"
             android:layout_marginBottom="10dp"
-            android:background="@drawable/btn_rounded"
-            android:backgroundTint="@color/black"
-            android:drawableStart="@drawable/ic_google_logo"
-            android:fontFamily="@font/montserrat_medium"
-            android:padding="10dp"
-            android:text="@string/btn_continue_google"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+            app:background="@color/black"
+            app:imageStartSrc="@drawable/ic_google_logo"
+            app:text="@string/btn_continue_google"
+            app:textSize="18sp" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button2"
+        <com.ctrlz.beslim.controls.CustomButton
             android:layout_width="320dp"
             android:layout_height="55dp"
             android:layout_marginBottom="10dp"
-            android:background="@drawable/btn_rounded"
-            android:backgroundTint="#1877F2"
-            android:drawableStart="@drawable/ic_facebook_logo"
-            android:fontFamily="@font/montserrat_medium"
-            android:padding="10dp"
-            android:text="@string/btn_continue_facebook"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+            app:imageStartSrc="@drawable/ic_facebook_logo"
+            app:text="@string/btn_continue_facebook"
+            app:textSize="18sp"
+            app:background="@color/blue"
+            app:textMarginStart="25dp"
+            />
 
-        <TextView
-            android:id="@+id/signInTextView"
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:id="@+id/button2"-->
+<!--            android:layout_width="320dp"-->
+<!--            android:layout_height="55dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:background="@drawable/btn_rounded"-->
+<!--            android:backgroundTint="#1877F2"-->
+<!--            android:drawableStart="@drawable/ic_facebook_logo"-->
+<!--            android:fontFamily="@font/montserrat_medium"-->
+<!--            android:padding="10dp"-->
+<!--            android:text="@string/btn_continue_facebook"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="18sp" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/signInTextView"-->
+<!--            android:layout_width="300dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:fontFamily="@font/montserrat_medium"-->
+<!--            android:gravity="center"-->
+<!--            android:text="@string/link_login"-->
+<!--            android:textColor="#D2D7DA"-->
+<!--            android:textSize="16sp" />-->
+
+        <com.ctrlz.beslim.controls.CustomButton
+            android:id="@+id/signInButton"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/montserrat_medium"
-            android:gravity="center"
-            android:text="@string/link_login"
-            android:textColor="#D2D7DA"
-            android:textSize="16sp" />
+            app:background="@color/transparent"
+            app:textSize="16sp"
+            app:textColor="#D2D7DA"
+            app:text="@string/link_login"
+            android:layout_gravity="center_horizontal"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
