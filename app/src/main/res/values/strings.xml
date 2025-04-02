@@ -1,0 +1,35 @@
+<resources>
+
+    <!--Button-->
+    <string name="btn_create_account">Create an account</string>
+    <string name="btn_continue">Continue</string>
+    <string name="btn_continue_google">Continue with Google</string>
+    <string name="btn_continue_facebook">Continue with Facebook</string>
+    <string name="btn_restore_access">Restore access</string>
+    <string name="OK">OK</string>
+
+    <!--App-->
+    <string name="app_name" translatable="false">BeSlim</string>
+
+    <!--Link-->
+    <string name="link_login">Already have account ? Log in</string>
+
+    <!--Hints-->
+    <string name="hint_email" translatable="false">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_name">Full name</string>
+
+    <!--Main Layout-->
+
+    <string name="ml_logo_description" translatable="false">BeSlim</string>
+    <string name="ml_separator">or continue with</string>
+
+    <!--Sign Up Layout-->
+    <string name="sul_title">Sign Up</string>
+    <string name="sul_description">Let\'s create an account and change your life</string>
+
+    <!--Sign In Layout-->
+    <string name="sil_title">Sign In</string>
+    <string name="sil_description">Welcome back! Enter your email and password</string>
+
+</resources>

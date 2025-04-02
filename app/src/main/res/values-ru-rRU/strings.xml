@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="ml_separator">войти через</string>
+    <string name="btn_create_account">Создать аккаунт</string>
+    <string name="link_login">Уже есть аккаунт ? Войти</string>
+    <string name="sul_title">Создать аккаунт</string>
+    <string name="sul_description">Давайте создадим аккаунт и изменим вашу жизнь</string>
+    <string name="hint_password">Пароль</string>
+    <string name="btn_continue">Продолжить</string>
+    <string name="btn_continue_google">Войти через Google</string>
+    <string name="btn_continue_facebook">Войти через Facebook</string>
+    <string name="hint_name">Полное имя</string>
+    <string name="sil_title">Войти</string>
+    <string name="sil_description">С возвращением! Введите адрес электронной почты и пароль</string>
+    <string name="btn_restore_access">Восстановить доступ</string>
+    <string name="OK">ОК</string>
+
+</resources>

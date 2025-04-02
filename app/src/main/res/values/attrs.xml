@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TestButton">
+        <attr name="text" format="string"/>
+        <attr name="imageStartSrc" format="reference"/>
+        <attr name="imageEndSrc" format="reference"/>
+        <attr name="background" format="reference"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="textMarginStart" format="dimension"/>
+        <attr name="textColor" format="color|reference"/>
+        <attr name="fontFamily" format="string|reference"/>
+        <attr name="progressColor" format="color|reference"/>
+    </declare-styleable>
+</resources>
