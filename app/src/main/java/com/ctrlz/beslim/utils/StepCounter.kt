@@ -28,7 +28,7 @@ class StepCounter(private val context: Context) : SensorEventListener {
         stepSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER)
 
         if (stepSensor == null) {
-            Toast.makeText(context, "Сенсор не доступен", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Sensor not available", Toast.LENGTH_SHORT).show()
         }
     }
 
