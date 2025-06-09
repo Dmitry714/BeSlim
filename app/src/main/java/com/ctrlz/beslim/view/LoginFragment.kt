@@ -42,7 +42,6 @@ class LoginFragment : BottomSheetDialogFragment() {
 
             lifecycleScope.launch {
 
-
                 try {
 
                     progressBar.visibility = View.VISIBLE
@@ -70,14 +69,14 @@ class LoginFragment : BottomSheetDialogFragment() {
                             else{
                                 DialogBuilder().infoDialog(
                                     "Error",
-                                    response.body()?.message ?: "Хз че произошло ._.",
+                                    response.body()?.message ?: "An error occurred while trying to log in",
                                     requireContext()
                                 )
                             }
                         } else {
                             DialogBuilder().infoDialog(
                                 "Error:",
-                                response.errorBody()?.string() ?: "Хз че произошло ._.",
+                                response.errorBody()?.string() ?: "Error sending request to server",
                                 requireContext()
                             )
                             dismiss()
@@ -92,7 +91,7 @@ class LoginFragment : BottomSheetDialogFragment() {
                 } catch (e: Exception) {
                     DialogBuilder().infoDialog(
                         "API Exception:",
-                        e.message ?: "Хз че произошло ._.",
+                        e.message ?: "Unknown error",
                         requireContext()
                     )
                 } finally {
